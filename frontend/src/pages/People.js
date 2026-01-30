@@ -22,7 +22,7 @@ export const People = () => {
     {
       name: 'Vikram Chandra',
       title: 'Partner',
-      qualifications: 'LL.M (Yale), Barrister (Lincoln's Inn)',
+      qualifications: 'LL.M (Yale), Barrister (Lincoln\'s Inn)',
       areas: 'Dispute Resolution, Arbitration',
       bio: 'Mr. Chandra has extensive experience in commercial litigation and international arbitration, representing clients in complex disputes across various forums and jurisdictions.',
     },
