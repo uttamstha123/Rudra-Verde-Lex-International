@@ -40,6 +40,15 @@ code {
     --input: 0 0% 90%;
     --ring: 0 0% 10%;
     --radius: 0rem;
+    
+    /* Enhanced color palette */
+    --navy-dark: 210 20% 15%;
+    --charcoal: 0 0% 20%;
+    --grey-50: 0 0% 98%;
+    --grey-100: 0 0% 96%;
+    --grey-200: 0 0% 93%;
+    --grey-300: 0 0% 88%;
+    --divider: 0 0% 90%;
   }
 }
 
@@ -61,6 +70,32 @@ code {
   }
   .font-sans {
     font-family: 'IBM Plex Sans', sans-serif;
+  }
+  
+  /* Custom color utilities */
+  .bg-navy-dark {
+    background-color: hsl(var(--navy-dark));
+  }
+  .bg-charcoal {
+    background-color: hsl(var(--charcoal));
+  }
+  .bg-grey-50 {
+    background-color: hsl(var(--grey-50));
+  }
+  .bg-grey-100 {
+    background-color: hsl(var(--grey-100));
+  }
+  .bg-grey-200 {
+    background-color: hsl(var(--grey-200));
+  }
+  .text-navy-dark {
+    color: hsl(var(--navy-dark));
+  }
+  .text-charcoal {
+    color: hsl(var(--charcoal));
+  }
+  .border-divider {
+    border-color: hsl(var(--divider));
   }
 }
 
