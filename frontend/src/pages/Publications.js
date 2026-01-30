@@ -113,20 +113,21 @@ export const Publications = () => {
               <article
                 key={index}
                 data-testid={`publication-${index}`}
-                className="p-8 bg-white border border-gray-200 hover:border-black transition-colors duration-300"
+                className="p-10 bg-white border border-grey-300 hover:border-navy-dark transition-all duration-300 card-hover"
               >
-                <h3 className="font-serif text-xl text-black mb-3">{pub.title}</h3>
-                <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-4">
-                  <span data-testid={`pub-author-${index}`}>{pub.author}</span>
+                <h3 className="font-serif text-2xl text-navy-dark mb-4 tracking-wide">{pub.title}</h3>
+                <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-6">
+                  <span data-testid={`pub-author-${index}`} className="font-medium">{pub.author}</span>
                   <span>•</span>
                   <span data-testid={`pub-publication-${index}`}>{pub.publication}</span>
                   <span>•</span>
                   <span data-testid={`pub-year-${index}`}>{pub.year}</span>
                   <span>•</span>
-                  <span data-testid={`pub-type-${index}`} className="px-2 py-1 bg-gray-100 text-xs">
+                  <span data-testid={`pub-type-${index}`} className="px-3 py-1 bg-grey-100 text-xs tracking-wide border border-grey-300">
                     {pub.type}
                   </span>
                 </div>
+                <div className="w-16 h-0.5 bg-grey-300 mb-4"></div>
                 <p className="text-gray-600 text-sm leading-relaxed">{pub.abstract}</p>
               </article>
             ))}
