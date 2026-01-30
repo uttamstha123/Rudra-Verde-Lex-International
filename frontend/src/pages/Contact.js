@@ -41,10 +41,10 @@ export const Contact = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {/* Office Location */}
-            <div data-testid="contact-location" className="p-8 bg-gray-50 border border-gray-200">
-              <h3 className="font-serif text-xl text-black mb-6">Office Location</h3>
-              <div className="space-y-3 text-gray-700">
-                <p className="font-medium">Rudra Verde Lex International</p>
+            <div data-testid="contact-location" className="p-10 bg-white border-l-4 border-navy-dark">
+              <h3 className="font-serif text-2xl text-navy-dark mb-8 tracking-wide">Office Location</h3>
+              <div className="space-y-3 text-gray-700 leading-relaxed">
+                <p className="font-medium text-navy-dark">Rudra Verde Lex International</p>
                 <p>123 Legal District Avenue</p>
                 <p>Metropolitan Center, Suite 1500</p>
                 <p>New Delhi 110001</p>
@@ -53,18 +53,18 @@ export const Contact = () => {
             </div>
 
             {/* Contact Details */}
-            <div data-testid="contact-details" className="p-8 bg-gray-50 border border-gray-200">
-              <h3 className="font-serif text-xl text-black mb-6">Contact Details</h3>
-              <div className="space-y-4 text-gray-700">
+            <div data-testid="contact-details" className="p-10 bg-white border-l-4 border-charcoal">
+              <h3 className="font-serif text-2xl text-charcoal mb-8 tracking-wide">Contact Details</h3>
+              <div className="space-y-6 text-gray-700">
                 <div>
-                  <p className="text-sm text-gray-500 mb-1">General Inquiries</p>
-                  <p data-testid="contact-email" className="font-medium">
+                  <p className="text-sm text-gray-500 mb-2 tracking-wide">General Inquiries</p>
+                  <p data-testid="contact-email" className="font-medium text-navy-dark">
                     info@rudraverdelex.international
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500 mb-1">Academic Correspondence</p>
-                  <p data-testid="contact-academic-email" className="font-medium">
+                  <p className="text-sm text-gray-500 mb-2 tracking-wide">Academic Correspondence</p>
+                  <p data-testid="contact-academic-email" className="font-medium text-navy-dark">
                     academic@rudraverdelex.international
                   </p>
                 </div>
@@ -73,26 +73,26 @@ export const Contact = () => {
           </div>
 
           {/* Important Notice */}
-          <div data-testid="contact-notice" className="p-8 bg-white border-2 border-black">
-            <h3 className="font-serif text-xl text-black mb-4">Important Notice</h3>
-            <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+          <div data-testid="contact-notice" className="p-10 bg-grey-50 border-l-4 border-navy-dark">
+            <h3 className="font-serif text-2xl text-navy-dark mb-6 tracking-wide">Important Notice</h3>
+            <div className="space-y-5 text-sm text-gray-700 leading-relaxed">
               <p>
-                <strong>No Solicitation:</strong> The contact information provided on this page is for institutional,
+                <strong className="text-navy-dark">No Solicitation:</strong> The contact information provided on this page is for institutional,
                 academic, and professional correspondence only. It does not constitute an invitation for client solicitation
                 or an offer of legal services.
               </p>
               <p>
-                <strong>No Attorney-Client Relationship:</strong> Communication via email or other means does not establish
+                <strong className="text-navy-dark">No Attorney-Client Relationship:</strong> Communication via email or other means does not establish
                 an attorney-client relationship. Do not send confidential or time-sensitive information through unsecured
                 email.
               </p>
               <p>
-                <strong>Response Times:</strong> While we endeavor to respond to appropriate inquiries in a timely manner,
+                <strong className="text-navy-dark">Response Times:</strong> While we endeavor to respond to appropriate inquiries in a timely manner,
                 response to communications does not guarantee that the firm will undertake representation or provide legal
                 advice.
               </p>
               <p>
-                <strong>Academic Inquiries:</strong> For academic collaboration, speaking engagements, or scholarly
+                <strong className="text-navy-dark">Academic Inquiries:</strong> For academic collaboration, speaking engagements, or scholarly
                 correspondence, please use the academic contact address and clearly indicate the nature of your inquiry.
               </p>
             </div>
