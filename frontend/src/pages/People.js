@@ -88,12 +88,13 @@ export const People = () => {
               <div
                 key={index}
                 data-testid={`team-member-${index}`}
-                className="p-8 bg-white border border-gray-200 hover:border-black transition-colors duration-300"
+                className="p-10 bg-white border border-grey-300 hover:border-navy-dark transition-all duration-300 card-hover"
               >
-                <h3 className="font-serif text-2xl text-black mb-2">{member.name}</h3>
-                <p className="text-gray-500 text-sm mb-1">{member.title}</p>
-                <p className="text-gray-500 text-xs mb-4">{member.qualifications}</p>
-                <p className="text-black text-sm font-medium mb-4">Areas: {member.areas}</p>
+                <h3 className="font-serif text-3xl text-navy-dark mb-3 tracking-wide">{member.name}</h3>
+                <p className="text-gray-500 text-sm mb-1 font-medium tracking-wide">{member.title}</p>
+                <p className="text-gray-500 text-xs mb-6">{member.qualifications}</p>
+                <div className="w-16 h-0.5 bg-navy-dark mb-6"></div>
+                <p className="text-navy-dark text-sm font-medium mb-4 tracking-wide">Areas: {member.areas}</p>
                 <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
               </div>
             ))}
