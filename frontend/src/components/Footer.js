@@ -1,0 +1,66 @@
+import { Link } from 'react-router-dom';
+
+export const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer data-testid="main-footer" className="bg-black text-white py-16">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          <div>
+            <h3 className="font-serif text-xl mb-4">Rudra Verde Lex International</h3>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              An institutional legal presence committed to academic excellence and professional integrity.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="font-medium mb-4 text-sm tracking-wide">Navigation</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/about" data-testid="footer-link-about" className="text-gray-400 hover:text-white transition-colors">
+                  About the Firm
+                </Link>
+              </li>
+              <li>
+                <Link to="/practice" data-testid="footer-link-practice" className="text-gray-400 hover:text-white transition-colors">
+                  Practice Orientation
+                </Link>
+              </li>
+              <li>
+                <Link to="/values" data-testid="footer-link-values" className="text-gray-400 hover:text-white transition-colors">
+                  Values & Ethics
+                </Link>
+              </li>
+              <li>
+                <Link to="/publications" data-testid="footer-link-publications" className="text-gray-400 hover:text-white transition-colors">
+                  Publications
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-medium mb-4 text-sm tracking-wide">Legal</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/disclaimer" data-testid="footer-link-disclaimer" className="text-gray-400 hover:text-white transition-colors">
+                  Legal & Regulatory Disclaimer
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-800 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 space-y-4 md:space-y-0">
+            <p data-testid="copyright-text">© {currentYear} Rudra Verde Lex International. All rights reserved.</p>
+            <p data-testid="disclaimer-notice" className="text-xs text-center md:text-right max-w-md">
+              This website is for informational and academic purposes only and does not constitute legal advice or solicitation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
