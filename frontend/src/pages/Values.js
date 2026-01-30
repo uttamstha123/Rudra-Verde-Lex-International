@@ -49,29 +49,33 @@ export const Values = () => {
           </div>
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div data-testid="value-integrity" className="p-8 bg-gray-50">
-              <h3 className="font-serif text-xl text-black mb-4">Integrity</h3>
+            <div data-testid="value-integrity" className="p-10 bg-white border-l-4 border-navy-dark card-hover">
+              <h3 className="font-serif text-2xl text-navy-dark mb-4 tracking-wide">Integrity</h3>
+              <div className="w-12 h-0.5 bg-grey-300 mb-4"></div>
               <p className="text-gray-600 text-sm leading-relaxed">
                 Maintaining the highest standards of honesty, transparency, and ethical conduct in all professional
                 relationships and institutional operations.
               </p>
             </div>
-            <div data-testid="value-competence" className="p-8 bg-gray-50">
-              <h3 className="font-serif text-xl text-black mb-4">Competence</h3>
+            <div data-testid="value-competence" className="p-10 bg-white border-l-4 border-navy-dark card-hover">
+              <h3 className="font-serif text-2xl text-navy-dark mb-4 tracking-wide">Competence</h3>
+              <div className="w-12 h-0.5 bg-grey-300 mb-4"></div>
               <p className="text-gray-600 text-sm leading-relaxed">
                 Commitment to continuous learning, rigorous analysis, and the maintenance of professional knowledge
                 necessary for effective legal practice.
               </p>
             </div>
-            <div data-testid="value-independence" className="p-8 bg-gray-50">
-              <h3 className="font-serif text-xl text-black mb-4">Independence</h3>
+            <div data-testid="value-independence" className="p-10 bg-white border-l-4 border-navy-dark card-hover">
+              <h3 className="font-serif text-2xl text-navy-dark mb-4 tracking-wide">Independence</h3>
+              <div className="w-12 h-0.5 bg-grey-300 mb-4"></div>
               <p className="text-gray-600 text-sm leading-relaxed">
                 Preservation of intellectual and professional independence, free from conflicts of interest and external
                 pressures that might compromise objective judgment.
               </p>
             </div>
-            <div data-testid="value-confidentiality" className="p-8 bg-gray-50">
-              <h3 className="font-serif text-xl text-black mb-4">Confidentiality</h3>
+            <div data-testid="value-confidentiality" className="p-10 bg-white border-l-4 border-navy-dark card-hover">
+              <h3 className="font-serif text-2xl text-navy-dark mb-4 tracking-wide">Confidentiality</h3>
+              <div className="w-12 h-0.5 bg-grey-300 mb-4"></div>
               <p className="text-gray-600 text-sm leading-relaxed">
                 Strict adherence to duties of confidentiality and protection of privileged information in accordance with
                 professional obligations and regulatory requirements.
