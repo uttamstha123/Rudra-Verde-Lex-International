@@ -31,8 +31,8 @@ export const Navigation = () => {
   return (
     <nav
       data-testid="main-navigation"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-sm' : 'bg-white'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${
+        isScrolled ? 'bg-white shadow-sm border-divider' : 'bg-white border-grey-100'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -40,22 +40,22 @@ export const Navigation = () => {
           <Link
             to="/"
             data-testid="firm-logo"
-            className="text-xl font-serif text-black hover:opacity-70 transition-opacity"
+            className="text-xl font-serif text-navy-dark hover:text-charcoal transition-colors tracking-wide"
           >
             Rudra Verde Lex International
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-10">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 data-testid={`nav-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
-                className={`text-sm tracking-wide transition-colors duration-200 ${
+                className={`relative text-sm tracking-wider font-medium transition-all duration-200 pb-1 ${
                   location.pathname === link.path
-                    ? 'text-black border-b-2 border-black pb-1'
-                    : 'text-gray-600 hover:text-black'
+                    ? 'text-navy-dark after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-navy-dark'
+                    : 'text-gray-600 hover:text-navy-dark link-underline'
                 }`}
               >
                 {link.label}
@@ -67,7 +67,7 @@ export const Navigation = () => {
           <button
             data-testid="mobile-menu-button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden text-black p-2"
+            className="lg:hidden text-navy-dark hover:text-charcoal p-2 transition-colors"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
@@ -84,16 +84,16 @@ export const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div data-testid="mobile-menu" className="lg:hidden py-4 border-t border-gray-200">
+          <div data-testid="mobile-menu" className="lg:hidden py-4 border-t border-divider bg-grey-50">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 data-testid={`mobile-nav-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
-                className={`block py-3 text-base transition-colors ${
+                className={`block py-3 text-base transition-colors tracking-wide ${
                   location.pathname === link.path
-                    ? 'text-black font-medium'
-                    : 'text-gray-600 hover:text-black'
+                    ? 'text-navy-dark font-medium'
+                    : 'text-gray-600 hover:text-navy-dark'
                 }`}
               >
                 {link.label}
