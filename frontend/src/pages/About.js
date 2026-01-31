@@ -6,19 +6,19 @@ export const About = () => {
   const [missionRef, missionVisible] = useScrollAnimation();
 
   return (
-    <div data-testid="about-page" className="bg-white">
+    <div data-testid="about-page" className="section-neutral">
       {/* Header */}
       <section
         ref={headerRef}
-        className={`py-24 px-6 bg-gray-50 transition-all duration-1000 ${
+        className={`py-24 px-6 section-muted transition-all duration-1000 ${
           headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
         <div className="max-w-4xl mx-auto text-center">
-          <h1 data-testid="about-title" className="font-serif text-4xl sm:text-5xl lg:text-6xl text-black mb-6">
+          <h1 data-testid="about-title" className="font-serif text-4xl sm:text-5xl lg:text-6xl text-navy-dark mb-6">
             About the Firm
           </h1>
-          <p data-testid="about-subtitle" className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p data-testid="about-subtitle" className="text-lg text-charcoal max-w-2xl mx-auto">
             An institutional overview of our identity, history, and academic commitments.
           </p>
         </div>
@@ -32,10 +32,10 @@ export const About = () => {
         }`}
       >
         <div className="max-w-4xl mx-auto">
-          <h2 data-testid="history-title" className="font-serif text-3xl text-black mb-8">
+          <h2 data-testid="history-title" className="font-serif text-3xl text-navy-dark mb-8">
             Institutional History
           </h2>
-          <div className="space-y-6 text-gray-700 leading-relaxed">
+          <div className="space-y-6 text-charcoal leading-relaxed">
             <p data-testid="history-para-1">
               Rudra Verde Lex International was established as a professional institution dedicated to the practice and
               advancement of law through scholarly engagement and principled representation. From its inception, the firm
@@ -57,15 +57,15 @@ export const About = () => {
       {/* Mission & Approach */}
       <section
         ref={missionRef}
-        className={`py-20 px-6 bg-gray-50 transition-all duration-1000 delay-300 ${
+        className={`py-20 px-6 section-muted transition-all duration-1000 delay-300 ${
           missionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
         <div className="max-w-4xl mx-auto">
-          <h2 data-testid="mission-title" className="font-serif text-3xl text-black mb-8">
+          <h2 data-testid="mission-title" className="font-serif text-3xl text-navy-dark mb-8">
             Institutional Mission
           </h2>
-          <div className="space-y-6 text-gray-700 leading-relaxed">
+          <div className="space-y-6 text-charcoal leading-relaxed">
             <p data-testid="mission-para-1">
               Our mission is to advance legal understanding through rigorous analysis, ethical practice, and scholarly
               contribution. We seek to maintain an institutional presence that reflects both professional competence and
@@ -82,29 +82,29 @@ export const About = () => {
             </p>
           </div>
 
-          <div className="mt-12 p-8 bg-white border border-gray-200">
-            <h3 data-testid="principles-title" className="font-serif text-xl text-black mb-4">
+          <div className="mt-12 p-8 content-card">
+            <h3 data-testid="principles-title" className="font-serif text-xl text-navy-dark mb-4">
               Core Institutional Principles
             </h3>
-            <ul data-testid="principles-list" className="space-y-3 text-gray-700">
+            <ul data-testid="principles-list" className="space-y-3 text-charcoal">
               <li className="flex items-start">
-                <span className="mr-3 text-black">•</span>
+                <span className="mr-3 text-accent">•</span>
                 <span>Commitment to academic excellence and scholarly rigor</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-3 text-black">•</span>
+                <span className="mr-3 text-accent">•</span>
                 <span>Adherence to the highest standards of professional ethics</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-3 text-black">•</span>
+                <span className="mr-3 text-accent">•</span>
                 <span>Respect for regulatory frameworks and legal institutions</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-3 text-black">•</span>
+                <span className="mr-3 text-accent">•</span>
                 <span>Dedication to transparent and accountable professional conduct</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-3 text-black">•</span>
+                <span className="mr-3 text-accent">•</span>
                 <span>Engagement with the broader academic and professional community</span>
               </li>
             </ul>

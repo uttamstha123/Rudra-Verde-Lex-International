@@ -36,19 +36,19 @@ export const People = () => {
   ];
 
   return (
-    <div data-testid="people-page" className="bg-white">
+    <div data-testid="people-page" className="section-neutral">
       {/* Header */}
       <section
         ref={headerRef}
-        className={`py-24 px-6 bg-gray-50 transition-all duration-1000 ${
+        className={`py-24 px-6 section-muted transition-all duration-1000 ${
           headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
         <div className="max-w-4xl mx-auto text-center">
-          <h1 data-testid="people-title" className="font-serif text-4xl sm:text-5xl lg:text-6xl text-black mb-6">
+          <h1 data-testid="people-title" className="font-serif text-4xl sm:text-5xl lg:text-6xl text-navy-dark mb-6">
             People
           </h1>
-          <p data-testid="people-subtitle" className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p data-testid="people-subtitle" className="text-lg text-charcoal max-w-2xl mx-auto">
             Our professional team and institutional contributors.
           </p>
         </div>
@@ -57,7 +57,7 @@ export const People = () => {
       {/* Team Introduction */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="space-y-6 text-gray-700 leading-relaxed mb-16">
+          <div className="space-y-6 text-charcoal leading-relaxed mb-16">
             <p data-testid="people-intro-1">
               Rudra Verde Lex International's professional team comprises individuals with distinguished academic credentials
               and extensive experience in legal practice and scholarship. Our collective expertise spans multiple jurisdictions
@@ -75,12 +75,12 @@ export const People = () => {
       {/* Team Members */}
       <section
         ref={teamRef}
-        className={`py-20 px-6 bg-gray-50 transition-all duration-1000 delay-200 ${
+        className={`py-20 px-6 section-muted transition-all duration-1000 delay-200 ${
           teamVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
         <div className="max-w-6xl mx-auto">
-          <h2 data-testid="team-members-title" className="font-serif text-3xl text-black mb-12 text-center">
+          <h2 data-testid="team-members-title" className="font-serif text-3xl text-navy-dark mb-12 text-center">
             Professional Team
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -88,14 +88,14 @@ export const People = () => {
               <div
                 key={index}
                 data-testid={`team-member-${index}`}
-                className="p-10 bg-white border border-grey-300 hover:border-navy-dark transition-all duration-300 card-hover"
+                className="p-10 content-card hover:border-accent transition-all duration-300 card-hover"
               >
                 <h3 className="font-serif text-3xl text-navy-dark mb-3 tracking-wide">{member.name}</h3>
-                <p className="text-gray-500 text-sm mb-1 font-medium tracking-wide">{member.title}</p>
-                <p className="text-gray-500 text-xs mb-6">{member.qualifications}</p>
+                <p className="text-charcoal text-sm mb-1 font-medium tracking-wide opacity-80">{member.title}</p>
+                <p className="text-charcoal text-xs mb-6 opacity-80">{member.qualifications}</p>
                 <div className="w-16 h-0.5 bg-navy-dark mb-6"></div>
                 <p className="text-navy-dark text-sm font-medium mb-4 tracking-wide">Areas: {member.areas}</p>
-                <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
+                <p className="text-charcoal text-sm leading-relaxed">{member.bio}</p>
               </div>
             ))}
           </div>
@@ -105,10 +105,10 @@ export const People = () => {
       {/* Academic Engagement */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 data-testid="engagement-title" className="font-serif text-3xl text-black mb-8">
+          <h2 data-testid="engagement-title" className="font-serif text-3xl text-navy-dark mb-8">
             Academic & Professional Engagement
           </h2>
-          <div className="space-y-6 text-gray-700 leading-relaxed">
+          <div className="space-y-6 text-charcoal leading-relaxed">
             <p data-testid="engagement-para-1">
               Members of our firm maintain active involvement with academic institutions, professional associations, and
               scholarly publications. This engagement reflects our commitment to advancing legal knowledge and contributing
@@ -121,29 +121,29 @@ export const People = () => {
             </p>
           </div>
 
-          <div className="mt-12 p-8 bg-gray-50">
-            <h3 data-testid="activities-title" className="font-serif text-xl text-black mb-4">
+          <div className="mt-12 p-8 content-card">
+            <h3 data-testid="activities-title" className="font-serif text-xl text-navy-dark mb-4">
               Professional Activities
             </h3>
-            <ul data-testid="activities-list" className="space-y-3 text-gray-700">
+            <ul data-testid="activities-list" className="space-y-3 text-charcoal">
               <li className="flex items-start">
-                <span className="mr-3 text-black">•</span>
+                <span className="mr-3 text-accent">•</span>
                 <span>Active membership in professional bar associations and legal societies</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-3 text-black">•</span>
+                <span className="mr-3 text-accent">•</span>
                 <span>Regular contributions to peer-reviewed legal journals and scholarly publications</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-3 text-black">•</span>
+                <span className="mr-3 text-accent">•</span>
                 <span>Participation in academic conferences and professional symposia</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-3 text-black">•</span>
+                <span className="mr-3 text-accent">•</span>
                 <span>Guest lectureships and teaching engagements at academic institutions</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-3 text-black">•</span>
+                <span className="mr-3 text-accent">•</span>
                 <span>Mentorship and guidance for emerging legal professionals</span>
               </li>
             </ul>

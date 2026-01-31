@@ -39,11 +39,11 @@ export const PracticeOrientation = () => {
   ];
 
   return (
-    <div data-testid="practice-page" className="bg-white">
+    <div data-testid="practice-page" className="section-neutral">
       {/* Header */}
       <section
         ref={headerRef}
-        className={`py-28 px-6 bg-gradient-to-b from-grey-50 to-white border-b border-divider transition-all duration-1000 ${
+        className={`py-28 px-6 section-neutral border-b border-divider transition-all duration-1000 ${
           headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
@@ -51,8 +51,8 @@ export const PracticeOrientation = () => {
           <h1 data-testid="practice-title" className="font-serif text-5xl sm:text-6xl lg:text-7xl text-navy-dark mb-6 tracking-wide">
             Practice Orientation
           </h1>
-          <div className="w-24 h-0.5 bg-charcoal mx-auto mb-8"></div>
-          <p data-testid="practice-subtitle" className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <div className="w-24 h-0.5 bg-divider mx-auto mb-8"></div>
+          <p data-testid="practice-subtitle" className="text-lg text-charcoal max-w-2xl mx-auto">
             Areas of professional focus and scholarly engagement.
           </p>
         </div>
@@ -61,7 +61,7 @@ export const PracticeOrientation = () => {
       {/* Practice Areas */}
       <section
         ref={areasRef}
-        className={`py-24 px-6 bg-white transition-all duration-1000 delay-200 ${
+        className={`py-24 px-6 section-neutral transition-all duration-1000 delay-200 ${
           areasVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
@@ -77,11 +77,11 @@ export const PracticeOrientation = () => {
               <div
                 key={index}
                 data-testid={`practice-area-${index}`}
-                className="p-10 bg-grey-50 border border-grey-300 hover:border-navy-dark transition-all duration-300 card-hover"
+                className="p-10 content-card hover:border-accent transition-all duration-300 card-hover"
               >
                 <h3 className="font-serif text-2xl text-navy-dark mb-5 tracking-wide">{area.title}</h3>
-                <div className="w-12 h-0.5 bg-grey-400 mb-5"></div>
-                <p className="text-gray-600 leading-relaxed text-sm">{area.description}</p>
+                <div className="w-12 h-0.5 bg-divider mb-5"></div>
+                <p className="text-charcoal leading-relaxed text-sm">{area.description}</p>
               </div>
             ))}
           </div>
@@ -102,7 +102,7 @@ export const PracticeOrientation = () => {
               Professional Methodology
             </h2>
           </div>
-          <div className="space-y-6 text-gray-700 leading-relaxed bg-white p-10 border border-grey-300">
+          <div className="space-y-6 text-charcoal leading-relaxed content-card p-10">
             <p data-testid="approach-para-1">
               Our approach to legal practice is characterized by thorough research, analytical precision, and principled
               advocacy. Each matter is addressed through careful examination of relevant legal frameworks, precedent, and
@@ -119,29 +119,29 @@ export const PracticeOrientation = () => {
             </p>
           </div>
 
-          <div className="mt-12 p-10 bg-white border-l-4 border-navy-dark">
+          <div className="mt-12 p-10 content-card border-l-4 border-accent">
             <h3 data-testid="methodology-title" className="font-serif text-2xl text-navy-dark mb-6 tracking-wide">
               Methodological Framework
             </h3>
-            <ul data-testid="methodology-list" className="space-y-4 text-gray-700">
+            <ul data-testid="methodology-list" className="space-y-4 text-charcoal">
               <li className="flex items-start">
-                <span className="mr-4 text-navy-dark font-medium">•</span>
+                <span className="mr-4 text-accent font-medium">•</span>
                 <span>Comprehensive legal research grounded in primary and secondary sources</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-4 text-navy-dark font-medium">•</span>
+                <span className="mr-4 text-accent font-medium">•</span>
                 <span>Careful analysis of statutory frameworks and judicial precedent</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-4 text-navy-dark font-medium">•</span>
+                <span className="mr-4 text-accent font-medium">•</span>
                 <span>Integration of scholarly perspectives and contemporary legal theory</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-4 text-navy-dark font-medium">•</span>
+                <span className="mr-4 text-accent font-medium">•</span>
                 <span>Strategic assessment informed by institutional and regulatory contexts</span>
               </li>
               <li className="flex items-start">
-                <span className="mr-4 text-navy-dark font-medium">•</span>
+                <span className="mr-4 text-accent font-medium">•</span>
                 <span>Commitment to transparent reasoning and principled argumentation</span>
               </li>
             </ul>
@@ -152,7 +152,7 @@ export const PracticeOrientation = () => {
       {/* Disclaimer */}
       <section data-testid="practice-disclaimer" className="py-20 px-6 bg-grey-200 border-t border-divider">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white p-8 border-l-4 border-charcoal">
+          <div className="content-card p-8 border-l-4 border-accent">
             <p className="text-sm text-gray-700 leading-relaxed">
               <strong className="text-navy-dark">Note:</strong> This overview is provided for informational purposes only and does not constitute legal
               advice or an offer of legal services. No attorney-client relationship is created through review of this content.

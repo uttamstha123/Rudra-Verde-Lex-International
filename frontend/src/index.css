@@ -63,8 +63,9 @@ code {
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'EB Garamond', serif;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.015em; /* slightly refined for premium feel */
     font-weight: 600;
+    line-height: 1.15; /* calm, authoritative heading line height */
   }
 }
 
@@ -78,11 +79,11 @@ code {
   /* Reading flow utilities */
   .prose-law {
     max-width: 68ch;
-    line-height: 1.75;
+    line-height: 1.8; /* slightly increased for dark backgrounds */
   }
   .prose-law-tight {
     max-width: 60ch;
-    line-height: 1.7;
+    line-height: 1.75;
   }
   
   /* Custom color utilities */
@@ -129,12 +130,16 @@ code {
   .content-card {
     background-color: hsl(var(--card)) !important; /* #1C1C1C */
     border: 1px solid hsl(var(--divider));
-    box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.03), /* subtle top highlight */
+      0 1px 0 rgba(0,0,0,0.4); /* matte base */
   }
   .content-card-soft {
     background-color: hsl(var(--card)) !important; /* #1C1C1C */
     border: 1px solid hsl(var(--divider));
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.03),
+      0 6px 14px rgba(0,0,0,0.22);
   }
   
   /* Accent heading rule */
@@ -142,6 +147,7 @@ code {
     width: 4rem;
     height: 2px;
     background-color: hsl(var(--accent));
+    opacity: 0.85; /* restrained gold accent */
   }
   
   /* Subtle link interaction */

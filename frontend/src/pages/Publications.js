@@ -62,19 +62,19 @@ export const Publications = () => {
   ];
 
   return (
-    <div data-testid="publications-page" className="bg-white">
+    <div data-testid="publications-page" className="section-neutral">
       {/* Header */}
       <section
         ref={headerRef}
-        className={`py-24 px-6 bg-gray-50 transition-all duration-1000 ${
+        className={`py-24 px-6 section-muted transition-all duration-1000 ${
           headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
         <div className="max-w-4xl mx-auto text-center">
-          <h1 data-testid="publications-title" className="font-serif text-4xl sm:text-5xl lg:text-6xl text-black mb-6">
+          <h1 data-testid="publications-title" className="font-serif text-4xl sm:text-5xl lg:text-6xl text-navy-dark mb-6">
             Publications & Insights
           </h1>
-          <p data-testid="publications-subtitle" className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p data-testid="publications-subtitle" className="text-lg text-charcoal max-w-2xl mx-auto">
             Scholarly contributions and professional insights from our team.
           </p>
         </div>
@@ -83,7 +83,7 @@ export const Publications = () => {
       {/* Introduction */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="space-y-6 text-gray-700 leading-relaxed mb-16">
+          <div className="space-y-6 text-charcoal leading-relaxed mb-16">
             <p data-testid="publications-intro-1">
               The professionals at Rudra Verde Lex International maintain an active scholarly presence through contributions
               to peer-reviewed journals, academic publications, and professional discourse. These publications reflect our
@@ -100,12 +100,12 @@ export const Publications = () => {
       {/* Publications List */}
       <section
         ref={listRef}
-        className={`py-20 px-6 bg-gray-50 transition-all duration-1000 delay-200 ${
+        className={`py-20 px-6 section-muted transition-all duration-1000 delay-200 ${
           listVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
         <div className="max-w-5xl mx-auto">
-          <h2 data-testid="recent-publications-title" className="font-serif text-3xl text-black mb-12">
+          <h2 data-testid="recent-publications-title" className="font-serif text-3xl text-navy-dark mb-12">
             Recent Publications
           </h2>
           <div className="space-y-6">
@@ -113,22 +113,22 @@ export const Publications = () => {
               <article
                 key={index}
                 data-testid={`publication-${index}`}
-                className="p-10 bg-white border border-grey-300 hover:border-navy-dark transition-all duration-300 card-hover"
+                className="p-10 content-card hover:border-accent transition-all duration-300 card-hover"
               >
                 <h3 className="font-serif text-2xl text-navy-dark mb-4 tracking-wide">{pub.title}</h3>
-                <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-6">
+                <div className="flex flex-wrap gap-4 text-sm text-charcoal mb-6 opacity-80">
                   <span data-testid={`pub-author-${index}`} className="font-medium">{pub.author}</span>
                   <span>•</span>
                   <span data-testid={`pub-publication-${index}`}>{pub.publication}</span>
                   <span>•</span>
                   <span data-testid={`pub-year-${index}`}>{pub.year}</span>
                   <span>•</span>
-                  <span data-testid={`pub-type-${index}`} className="px-3 py-1 bg-grey-100 text-xs tracking-wide border border-grey-300">
+                  <span data-testid={`pub-type-${index}`} className="px-3 py-1 bg-grey-100 text-xs tracking-wide border border-divider">
                     {pub.type}
                   </span>
                 </div>
                 <div className="w-16 h-0.5 bg-grey-300 mb-4"></div>
-                <p className="text-gray-600 text-sm leading-relaxed">{pub.abstract}</p>
+                <p className="text-charcoal text-sm leading-relaxed">{pub.abstract}</p>
               </article>
             ))}
           </div>
@@ -138,11 +138,11 @@ export const Publications = () => {
       {/* Academic Use Disclaimer */}
       <section data-testid="publications-disclaimer" className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="p-8 bg-gray-100 border border-gray-300">
-            <h3 data-testid="academic-disclaimer-title" className="font-serif text-xl text-black mb-4">
+          <div className="p-8 content-card">
+            <h3 data-testid="academic-disclaimer-title" className="font-serif text-xl text-navy-dark mb-4">
               Academic Use Disclaimer
             </h3>
-            <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-sm text-charcoal leading-relaxed">
               <p>
                 The publications listed on this page are provided for informational and academic purposes only. They
                 represent the scholarly views and research of individual authors and should not be construed as legal
