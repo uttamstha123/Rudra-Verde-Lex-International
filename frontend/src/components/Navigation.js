@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+const logo = require('../assets/logo.png');
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,9 +41,14 @@ export const Navigation = () => {
           <Link
             to="/"
             data-testid="firm-logo"
-            className="text-xl font-serif text-navy-dark hover:text-charcoal transition-colors tracking-wide"
+            className="flex items-center"
+            aria-label="Rudra Verde Lex International"
           >
-            Rudra Verde Lex International
+            <img
+              src={logo}
+              alt="Rudra Verde Lex International logo"
+              className="h-20 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -52,10 +58,10 @@ export const Navigation = () => {
                 key={link.path}
                 to={link.path}
                 data-testid={`nav-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
-                className={`relative text-sm tracking-wider font-medium transition-all duration-200 pb-1 ${
+                className={`relative text-sm tracking-wider font-medium transition-all duration-200 pb-1 link-fade ${
                   location.pathname === link.path
-                    ? 'text-navy-dark after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-navy-dark'
-                    : 'text-gray-600 hover:text-navy-dark link-underline'
+                    ? 'text-accent after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent'
+                    : 'text-gray-600 hover:text-charcoal link-underline'
                 }`}
               >
                 {link.label}
@@ -67,7 +73,7 @@ export const Navigation = () => {
           <button
             data-testid="mobile-menu-button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden text-navy-dark hover:text-charcoal p-2 transition-colors"
+            className="lg:hidden text-charcoal hover:text-accent p-2 transition-colors"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
@@ -92,8 +98,8 @@ export const Navigation = () => {
                 data-testid={`mobile-nav-link-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
                 className={`block py-3 text-base transition-colors tracking-wide ${
                   location.pathname === link.path
-                    ? 'text-navy-dark font-medium'
-                    : 'text-gray-600 hover:text-navy-dark'
+                    ? 'text-accent font-medium'
+                    : 'text-gray-600 hover:text-charcoal'
                 }`}
               >
                 {link.label}

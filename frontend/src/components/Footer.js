@@ -14,7 +14,7 @@ export const Footer = () => {
             </p>
           </div>
 
-          <div>
+          <div className="md:border-l md:border-gray-700 md:pl-10">
             <h4 className="font-medium mb-6 text-base tracking-widest uppercase text-gray-300">Navigation</h4>
             <ul className="space-y-3 text-sm">
               <li>
@@ -40,7 +40,7 @@ export const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          <div className="md:border-l md:border-gray-700 md:pl-10">
             <h4 className="font-medium mb-6 text-base tracking-widest uppercase text-gray-300">Legal</h4>
             <ul className="space-y-3 text-sm">
               <li>
