@@ -125,7 +125,7 @@ code {
   }
   .hairline { /* subtle divider using accent */
     border-top: 1px solid hsl(var(--accent));
-    opacity: 0.25;
+    /* opacity: 0.25; */
   }
   
   /* Content containers/cards */

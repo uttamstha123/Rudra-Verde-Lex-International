@@ -75,7 +75,7 @@ export const Home = () => {
           <div className="mb-4">
             <div className="heading-rule mb-6"></div>
             <h2 data-testid="intro-title" className="font-serif text-4xl sm:text-5xl text-navy-dark mb-10 tracking-wide">
-              Institutional Commitment
+              <span class="text-accent">Institutional</span> Commitment
             </h2>
           </div>
           <div className="content-card bg-grey-50 p-10">
