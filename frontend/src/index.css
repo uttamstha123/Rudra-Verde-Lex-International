@@ -123,10 +123,6 @@ code {
   .section-neutral { /* neutral white */
     background-color: hsl(var(--background)); /* #FFFFFF */
   }
-  .hairline { /* subtle divider using accent */
-    border-top: 1px solid hsl(var(--accent));
-    /* opacity: 0.25; */
-  }
   
   /* Content containers/cards */
   .content-card {
