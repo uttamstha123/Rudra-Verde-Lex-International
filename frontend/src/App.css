@@ -66,18 +66,18 @@ html {
 
 /* Selection styling */
 ::selection {
-  background-color: #8B2635;
-  color: #ffffff;
+  background-color: #B89B4F; /* muted gold accent */
+  color: #0E0E0E;
 }
 
 ::-moz-selection {
-  background-color: #8B2635;
-  color: #ffffff;
+  background-color: #B89B4F;
+  color: #0E0E0E;
 }
 
 /* Focus styles for accessibility */
 *:focus-visible {
-  outline: 2px solid #8B2635;
+  outline: 2px solid #B89B4F;
   outline-offset: 2px;
 }
 
@@ -143,8 +143,8 @@ button {
 
 /* Section divider */
 .section-divider {
-  border-top: 1px solid hsl(var(--accent));
-  opacity: 0.25;
+  border-top: 1px solid hsl(var(--divider));
+  opacity: 0.5;
 }
 
 /* Hero text readability helpers (no media changes) */
@@ -165,6 +165,18 @@ button {
 .hero-subtitle-refined {
   color: hsl(var(--charcoal));
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Glassmorphism container for hero text (dark glass) */
+.hero-glass {
+  display: inline-block;
+  padding: 1.5rem 2rem;
+  background: rgba(28, 28, 28, 0.55); /* dark translucent glass */
+  border: 1px solid hsl(var(--divider));
+  border-radius: 6px;
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+  backdrop-filter: blur(8px) saturate(120%);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
 }
 
 /* Hero background media styles */
@@ -193,18 +205,18 @@ button {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(255, 255, 255, 0.50),
-    rgba(255, 255, 255, 0.74)
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.10)
   );
 }
 
 /* Respect reduced motion and mobile fallback */
 @media (prefers-reduced-motion: reduce) {
-  .hero-media { display: none; }
+  /* .hero-media { display: none; } */
   .hero-media-fallback { display: block; }
 }
 
 @media (max-width: 640px) {
-  .hero-media { display: none; }
+  /* .hero-media { display: none; } */
   .hero-media-fallback { display: block; }
 }

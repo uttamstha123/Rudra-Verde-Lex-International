@@ -33,7 +33,7 @@ export const Navigation = () => {
     <nav
       data-testid="main-navigation"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${
-        isScrolled ? 'bg-white shadow-sm border-divider' : 'bg-white border-grey-100'
+        isScrolled ? 'bg-grey-50 shadow-sm border-divider' : 'bg-grey-50 border-divider'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -61,7 +61,7 @@ export const Navigation = () => {
                 className={`relative text-sm tracking-wider font-medium transition-all duration-200 pb-1 link-fade ${
                   location.pathname === link.path
                     ? 'text-accent after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-accent'
-                    : 'text-gray-600 hover:text-charcoal link-underline'
+                    : 'text-charcoal hover:text-accent link-underline'
                 }`}
               >
                 {link.label}
@@ -99,7 +99,7 @@ export const Navigation = () => {
                 className={`block py-3 text-base transition-colors tracking-wide ${
                   location.pathname === link.path
                     ? 'text-accent font-medium'
-                    : 'text-gray-600 hover:text-charcoal'
+                    : 'text-charcoal hover:text-accent'
                 }`}
               >
                 {link.label}

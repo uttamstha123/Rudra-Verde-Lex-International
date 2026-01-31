@@ -58,23 +58,20 @@ export const Home = () => {
             data-testid="hero-title"
             className="font-serif text-5xl sm:text-6xl lg:text-7xl text-navy-dark mb-8 leading-tight tracking-wide"
           >
-            Rudra Verde Lex International
+            <span className="text-accent">Rudra Verde Lex</span> International
           </h1>
           <div className="heading-rule mx-auto mb-8"></div>
           <p
             data-testid="hero-subtitle"
             className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed"
           >
-            An institutional legal presence dedicated to excellence in
-            jurisprudence, scholarship, and professional practice.
+           Supreme law of truth beyond borders.
           </p>
         </div>
       </section>
-
-      {/* Introduction Section */}
       <section
         ref={introRef}
-        className={`py-24 px-6 bg-white  transition-all duration-1000 delay-200 ${
+        className={`py-24 px-6 section-neutral hairline transition-all duration-1000 delay-200 ${
           introVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
@@ -85,7 +82,7 @@ export const Home = () => {
               data-testid="intro-title"
               className="font-serif text-4xl sm:text-5xl text-navy-dark mb-10 tracking-wide"
             >
-              <span class="text-accent">Institutional</span> Commitment
+              <span className="text-accent">Institutional</span> Commitment
             </h2>
           </div>
           <div className="content-card bg-grey-50 p-10">
@@ -124,7 +121,7 @@ export const Home = () => {
               data-testid="areas-title"
               className="font-serif text-4xl sm:text-5xl text-navy-dark tracking-wide"
             >
-              Our Focus
+              Our <span className="text-accent">Focus</span>
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
