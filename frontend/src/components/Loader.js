@@ -7,9 +7,9 @@ export function Loader({ progress = 0, taglines }) {
   const lines = useMemo(() => {
     const defaults = [
       "Integrity. Insight. Impact.",
-      "Precision with perspective.",
-      "Law grounded in values.",
-      "Advocacy with clarity.",
+      "Precision informed by perspective.",
+      "Law rooted in constitutional values.",
+      "Advocacy marked by clarity.",
     ];
     if (Array.isArray(taglines) && taglines.length > 0) return taglines;
     if (typeof taglines === "string" && taglines.trim().length > 0) return [taglines];
