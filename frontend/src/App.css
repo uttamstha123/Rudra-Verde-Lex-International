@@ -5,8 +5,8 @@
     transform: translateY(30px);
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25); /* calm, premium lift on dark */
   }
 }
 
@@ -26,7 +26,8 @@
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    width: 100%;
+    opacity: 0.9; /* restrained emphasis */
   }
 }
 
@@ -186,8 +187,9 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.8; /* 80% for clearer visibility */
-  filter: grayscale(40%) contrast(92%) saturate(85%);
+  opacity: 0.2; /* subtle visibility to avoid wash-out on iOS */
+  filter: grayscale(20%) contrast(94%) saturate(80%) brightness(0.9);
+  transform: translateZ(0);
   pointer-events: none;
 }
 
@@ -205,18 +207,34 @@ button {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(255, 255, 255, 0.05),
-    rgba(255, 255, 255, 0.10)
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.35)
   );
 }
 
 /* Respect reduced motion and mobile fallback */
 @media (prefers-reduced-motion: reduce) {
-  /* .hero-media { display: none; } */
+  .hero-media { display: none; }
   .hero-media-fallback { display: block; }
 }
 
 @media (max-width: 640px) {
-  /* .hero-media { display: none; } */
+  .hero-media { display: none; }
   .hero-media-fallback { display: block; }
+}
+
+/* iOS Safari-specific rendering tweaks */
+@supports (-webkit-touch-callout: none) {
+  .hero-media {
+    opacity: 0.18;
+    filter: contrast(96%) brightness(0.86) saturate(78%);
+    transform: translate3d(0,0,0);
+  }
+  .hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.28),
+      rgba(0, 0, 0, 0.38)
+    );
+  }
 }
