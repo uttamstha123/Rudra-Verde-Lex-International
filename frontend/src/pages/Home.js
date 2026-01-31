@@ -1,7 +1,6 @@
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { useEffect, useRef } from 'react';
 const heroVideo = require('../assets/lady justice.mp4');
-const logo = require('../assets/logo.png');
 
 export const Home = () => {
   const [heroRef, heroVisible] = useScrollAnimation();
@@ -40,7 +39,6 @@ export const Home = () => {
             loop
             playsInline
             preload="metadata"
-            poster={logo}
           >
             <source src={heroVideo} type="video/mp4" />
           </video>
