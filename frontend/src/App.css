@@ -214,17 +214,17 @@ button {
 
 /* Respect reduced motion and mobile fallback */
 @media (prefers-reduced-motion: reduce) {
-  .hero-media { display: none; }
-  .hero-media-fallback { display: block; }
+  /* .hero-media { display: none; }
+  .hero-media-fallback { display: block; } */
 }
 
 @media (max-width: 640px) {
-  .hero-media { display: none; }
-  .hero-media-fallback { display: block; }
+  /* .hero-media { display: none; }
+  .hero-media-fallback { display: block; } */
 }
 
 /* iOS Safari-specific rendering tweaks */
-@supports (-webkit-touch-callout: none) {
+/* @supports (-webkit-touch-callout: none) {
   .hero-media {
     opacity: 0.18;
     filter: contrast(96%) brightness(0.86) saturate(78%);
@@ -237,4 +237,4 @@ button {
       rgba(0, 0, 0, 0.38)
     );
   }
-}
+} */
