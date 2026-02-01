@@ -133,6 +133,18 @@ export const Home = () => {
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div
+              data-testid="focus-area-3"
+              className="content-card-soft bg-white p-10 card-hover"
+            >
+              <h3 className="font-serif text-2xl text-navy-dark mb-5 tracking-wide">
+                NDPS
+              </h3>
+              {/* <div className="w-12 h-0.5 bg-grey-300 mb-0"></div> */}
+              <p className="text-gray-600 leading-relaxed text-sm">
+               In NDPS litigation, the Firm subjects every search, seizure, and arrest to rigorous compliance analysis under Sections 41, 42, 43, 50, and 57, conscious that deviation from statutory safeguards may vitiate proceedings ab initio. The concept of conscious possession is examined through evidentiary nexus and forensic integrity, with strict evaluation of sampling procedures and chain of custody.
+              </p>
+            </div>
             <div
               data-testid="focus-area-1"
               className="content-card-soft bg-white p-10 card-hover"
@@ -155,18 +167,6 @@ export const Home = () => {
               {/* <div className="w-12 h-0.5 bg-grey-300 mb-0"></div> */}
               <p className="text-gray-600 leading-relaxed text-sm">
                In White Collar Crime and Economic Offences, the Firm undertakes forensic examination of prosecution complaints, attachment orders, and financial records under statutes including PMLA, Companies Act, and allied regulatory frameworks, ensuring that coercive state action withstands constitutional scrutiny.
-              </p>
-            </div>
-            <div
-              data-testid="focus-area-3"
-              className="content-card-soft bg-white p-10 card-hover"
-            >
-              <h3 className="font-serif text-2xl text-navy-dark mb-5 tracking-wide">
-                NDPS
-              </h3>
-              {/* <div className="w-12 h-0.5 bg-grey-300 mb-0"></div> */}
-              <p className="text-gray-600 leading-relaxed text-sm">
-               In NDPS litigation, the Firm subjects every search, seizure, and arrest to rigorous compliance analysis under Sections 41, 42, 43, 50, and 57, conscious that deviation from statutory safeguards may vitiate proceedings ab initio. The concept of conscious possession is examined through evidentiary nexus and forensic integrity, with strict evaluation of sampling procedures and chain of custody.
               </p>
             </div>
           </div>
