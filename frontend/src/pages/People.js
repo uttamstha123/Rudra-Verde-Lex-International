@@ -43,7 +43,14 @@ export const People = () => {
         className={`py-24 px-6 section-muted transition-all duration-1000 ${
           headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
+         style={{
+             backgroundImage: `linear-gradient(rgba(9, 18, 32, 0.55), rgba(9, 18, 32, 0.55)), url(${new URL("../assets/team.webp", import.meta.url).href})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center 30%',
+          }}
       >
+          <div className="absolute inset-0 bg-black/40"></div>
+
         <div className="max-w-4xl mx-auto text-center">
           <h1 data-testid="people-title" className="font-serif text-4xl sm:text-5xl lg:text-6xl text-navy-dark mb-6">
             People

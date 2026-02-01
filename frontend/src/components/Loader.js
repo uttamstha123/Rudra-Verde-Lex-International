@@ -6,13 +6,17 @@ export function Loader({ progress = 0, taglines }) {
 
   const lines = useMemo(() => {
     const defaults = [
-      "Integrity. Insight. Impact.",
+      "Integrity. Insight. Judgment.",
       "Precision informed by perspective.",
       "Law rooted in constitutional values.",
       "Advocacy marked by clarity.",
+      "Reasoned advocacy. Responsible practice.",
+      "Principle. Process. Purpose.",
     ];
+
     if (Array.isArray(taglines) && taglines.length > 0) return taglines;
-    if (typeof taglines === "string" && taglines.trim().length > 0) return [taglines];
+    if (typeof taglines === "string" && taglines.trim().length > 0)
+      return [taglines];
     return defaults;
   }, [taglines]);
 
@@ -23,8 +27,8 @@ export function Loader({ progress = 0, taglines }) {
       return;
     }
     const interval = setInterval(() => {
-      setActiveIndex((i) => ((i + 1) % lines.length));
-    }, 800); // calmer cadence for readability
+      setActiveIndex((i) => (i + 1) % lines.length);
+    }, 500); // calmer cadence for readability
     return () => clearInterval(interval);
   }, [lines.length]);
 
@@ -37,11 +41,11 @@ export function Loader({ progress = 0, taglines }) {
 
         <div className="loader-taglines" aria-label="Taglines">
           <div className="loader-tagline is-active">
-            {lines[activeIndex] || ""}
+            सत्य विद्या न्याय स्थापना:
           </div>
         </div>
 
-        <div className="loader-progress" aria-label="Loading Progress">
+        {/* <div className="loader-progress" aria-label="Loading Progress">
           <div className="loader-progress-bar">
             <div
               className="loader-progress-fill"
@@ -51,7 +55,7 @@ export function Loader({ progress = 0, taglines }) {
           <div className="loader-progress-text" aria-live="polite">
             {safeProgress}%
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

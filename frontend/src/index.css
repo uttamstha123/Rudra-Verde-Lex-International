@@ -78,7 +78,7 @@ code {
   }
   /* Reading flow utilities */
   .prose-law {
-    max-width: 68ch;
+    /* max-width: 68ch; */
     line-height: 1.8; /* slightly increased for dark backgrounds */
   }
   .prose-law-tight {

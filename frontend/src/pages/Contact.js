@@ -45,9 +45,9 @@ export const Contact = () => {
               <h3 className="font-serif text-2xl text-navy-dark mb-8 tracking-wide">Office Location</h3>
               <div className="space-y-3 text-charcoal leading-relaxed">
                 <p className="font-medium text-navy-dark">Rudra Verde Lex International</p>
-                <p>123 Legal District Avenue</p>
-                <p>Metropolitan Center, Suite 1500</p>
-                <p>New Delhi 110001</p>
+                <p>15 bholaji puram, Basharatpur,</p>
+                <p>Gorakhpur</p>
+                <p>Uttar Pradesh 273001</p>
                 <p>India</p>
               </div>
             </div>
@@ -59,13 +59,13 @@ export const Contact = () => {
                 <div>
                   <p className="text-sm text-charcoal mb-2 tracking-wide opacity-80">General Inquiries</p>
                   <p data-testid="contact-email" className="font-medium text-navy-dark">
-                    info@rudraverdelex.international
+                    <a href="mailto:rudraverdelexinternational@gmail.com">rudraverdelexinternational@gmail.com</a>
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm text-charcoal mb-2 tracking-wide opacity-80">Academic Correspondence</p>
+                  <p className="text-sm text-charcoal mb-2 tracking-wide opacity-80">Contact Number</p>
                   <p data-testid="contact-academic-email" className="font-medium text-navy-dark">
-                    academic@rudraverdelex.international
+                    <a href="tel:+918528123330">+91 8528123330</a>
                   </p>
                 </div>
               </div>

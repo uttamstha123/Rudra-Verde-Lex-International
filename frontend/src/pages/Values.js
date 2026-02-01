@@ -8,23 +8,29 @@ export const Values = () => {
   return (
     <div data-testid="values-page" className="section-neutral">
       {/* Header */}
-      <section
-        ref={headerRef}
-        className={`py-24 px-6 section-muted transition-all duration-1000 ${
-          headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}
-      >
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 data-testid="values-title" className="font-serif text-4xl sm:text-5xl lg:text-6xl text-navy-dark mb-6">
-            Professional Values & Ethics
-          </h1>
-          <p data-testid="values-subtitle" className="text-lg text-charcoal max-w-2xl mx-auto">
-            The ethical foundations and professional standards guiding our institutional conduct.
-          </p>
-        </div>
-      </section>
+        <section
+          ref={headerRef}
+          className={`relative py-24 px-6 transition-all duration-1000 ${
+            headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+          style={{
+             backgroundImage: `linear-gradient(rgba(9, 18, 32, 0.55), rgba(9, 18, 32, 0.55)), url(${new URL("../assets/values.webp", import.meta.url).href})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="relative max-w-4xl mx-auto text-center">
+            <h1 data-testid="values-title" className="font-serif text-4xl sm:text-5xl lg:text-6xl text-navy-dark mb-6">
+          Professional Values & Ethics
+            </h1>
+            <p data-testid="values-subtitle" className="text-lg text-charcoal max-w-2xl mx-auto">
+          The ethical foundations and professional standards guiding our institutional conduct.
+            </p>
+          </div>
+        </section>
 
-      {/* Core Values */}
+        {/* Core Values */}
       <section
         ref={ethicsRef}
         className={`py-20 px-6 transition-all duration-1000 delay-200 ${
