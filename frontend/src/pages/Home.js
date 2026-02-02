@@ -65,7 +65,7 @@ export const Home = () => {
             data-testid="hero-subtitle"
             className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed"
           >
-            Supreme law of truth beyond borders.
+            Veritas Semper vincit.
           </p>
           <p
             data-testid="hero-subtitle"
