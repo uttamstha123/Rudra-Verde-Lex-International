@@ -137,7 +137,7 @@ export const Home = () => {
               data-testid="focus-area-3"
               className="content-card-soft bg-white p-10 card-hover"
             >
-              <h3 className="font-serif text-2xl text-navy-dark mb-5 tracking-wide">
+              <h3 className="font-serif text-2xl text-navy-dark mb-5 tracking-wide uppercase">
                 NDPS
               </h3>
               {/* <div className="w-12 h-0.5 bg-grey-300 mb-0"></div> */}
@@ -149,7 +149,7 @@ export const Home = () => {
               data-testid="focus-area-1"
               className="content-card-soft bg-white p-10 card-hover"
             >
-              <h3 className="font-serif text-2xl text-navy-dark mb-5 tracking-wide">
+              <h3 className="font-serif text-2xl text-navy-dark mb-5 tracking-wide uppercase">
                 Pocso
               </h3>
               {/* <div className="w-12 h-0.5 bg-grey-300 mb-0"></div> */}
@@ -161,7 +161,7 @@ export const Home = () => {
               data-testid="focus-area-2"
               className="content-card-soft bg-white p-10 card-hover"
             >
-              <h3 className="font-serif text-2xl text-navy-dark mb-5 tracking-wide">
+              <h3 className="font-serif text-2xl text-navy-dark mb-5 tracking-wide uppercase">
                 White Collar Crime
               </h3>
               {/* <div className="w-12 h-0.5 bg-grey-300 mb-0"></div> */}

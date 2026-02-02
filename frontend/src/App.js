@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     // Simulate progressive loading to 100% with a smooth cadence
     const start = performance.now();
-    const targetMs = 1700; // ~1.7s feels premium and calm
+    const targetMs = Math.random() * 100 + 500; // ~1.7s feels premium and calm
 
     const tick = () => {
       const elapsed = performance.now() - start;

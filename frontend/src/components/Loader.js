@@ -5,14 +5,14 @@ export function Loader({ progress = 0, taglines }) {
   const safeProgress = Math.max(0, Math.min(100, Math.floor(progress)));
 
   const lines = useMemo(() => {
-    const defaults = [
-      "Integrity. Insight. Judgment.",
-      "Precision informed by perspective.",
-      "Law rooted in constitutional values.",
-      "Advocacy marked by clarity.",
-      "Reasoned advocacy. Responsible practice.",
-      "Principle. Process. Purpose.",
-    ];
+    // const defaults = [
+    //   "Integrity. Insight. Judgment.",
+    //   "Precision informed by perspective.",
+    //   "Law rooted in constitutional values.",
+    //   "Advocacy marked by clarity.",
+    //   "Reasoned advocacy. Responsible practice.",
+    //   "Principle. Process. Purpose.",
+    // ];
 
     if (Array.isArray(taglines) && taglines.length > 0) return taglines;
     if (typeof taglines === "string" && taglines.trim().length > 0)
@@ -28,7 +28,7 @@ export function Loader({ progress = 0, taglines }) {
     }
     const interval = setInterval(() => {
       setActiveIndex((i) => (i + 1) % lines.length);
-    }, 500); // calmer cadence for readability
+    }, Math.random() * 100 + 500); // calmer cadence for readability
     return () => clearInterval(interval);
   }, [lines.length]);
 

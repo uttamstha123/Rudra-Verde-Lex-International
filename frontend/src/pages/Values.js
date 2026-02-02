@@ -43,50 +43,45 @@ export const Values = () => {
           </h2>
           <div className="space-y-6 text-charcoal leading-relaxed">
             <p data-testid="values-para-1">
-              Rudra Verde Lex International is founded upon unwavering commitment to professional ethics and institutional
-              integrity. Our practice is guided by principles that prioritize transparency, accountability, and respect for
-              the rule of law.
-            </p>
-            <p data-testid="values-para-2">
-              We recognize that the practice of law carries significant responsibilities to clients, to the legal profession,
-              and to society at large. These responsibilities inform every aspect of our professional conduct and institutional
-              decision-making.
+             At Rudra Verde Lex International, professional ethics are not merely aspirational ideals but binding norms flowing from lex et aequitas. The Firm conducts itself in strict adherence to the highest traditions of the Bar, guided by constitutional morality, professional honour, and bona fides in all legal dealings.
             </p>
           </div>
+         
 
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div data-testid="value-integrity" className="p-10 content-card border-l-4 border-accent card-hover">
               <h3 className="font-serif text-2xl text-navy-dark mb-4 tracking-wide">Integrity</h3>
               <div className="w-12 h-0.5 bg-grey-300 mb-4"></div>
               <p className="text-charcoal text-sm leading-relaxed">
-                Maintaining the highest standards of honesty, transparency, and ethical conduct in all professional
-                relationships and institutional operations.
+                Integrity (Integritas et Probitas) lies at the nucleus of the Firm’s ethos. All actions are governed by truthfulness, fairness, and moral rectitude, ensuring that advocacy is never compromised by deceit, misrepresentation, or dolus malus. The Firm remains committed to fiat justitia ruat caelum—let justice be done though the heavens fall.
               </p>
             </div>
             <div data-testid="value-competence" className="p-10 content-card border-l-4 border-accent card-hover">
               <h3 className="font-serif text-2xl text-navy-dark mb-4 tracking-wide">Competence</h3>
               <div className="w-12 h-0.5 bg-grey-300 mb-4"></div>
               <p className="text-charcoal text-sm leading-relaxed">
-                Commitment to continuous learning, rigorous analysis, and the maintenance of professional knowledge
-                necessary for effective legal practice.
+               Competence (Peritia et Diligentia) is maintained through rigorous legal research, continuous professional development, and mastery over substantive and procedural law. Every brief is handled with cura maxima, reflecting diligence, precision, and analytical depth, ensuring representation that meets the highest professional standards.
               </p>
             </div>
             <div data-testid="value-independence" className="p-10 content-card border-l-4 border-accent card-hover">
               <h3 className="font-serif text-2xl text-navy-dark mb-4 tracking-wide">Independence</h3>
               <div className="w-12 h-0.5 bg-grey-300 mb-4"></div>
               <p className="text-charcoal text-sm leading-relaxed">
-                Preservation of intellectual and professional independence, free from conflicts of interest and external
-                pressures that might compromise objective judgment.
+              Independence (Libertas Forensis) is zealously preserved. The Firm renders advice and advocacy free from external pressure, conflicts of interest, or undue influence, in conformity with nemo judex in causa sua and the duty of fearless representation within the bounds of law.
               </p>
             </div>
             <div data-testid="value-confidentiality" className="p-10 content-card border-l-4 border-accent card-hover">
               <h3 className="font-serif text-2xl text-navy-dark mb-4 tracking-wide">Confidentiality</h3>
               <div className="w-12 h-0.5 bg-grey-300 mb-4"></div>
               <p className="text-charcoal text-sm leading-relaxed">
-                Strict adherence to duties of confidentiality and protection of privileged information in accordance with
-                professional obligations and regulatory requirements.
+               Confidentiality (Fides et Secretum) is treated as sacrosanct. All client communications, documents, and strategies are protected under the doctrine of professional privilege, sub silentio et sub sigillo, except where disclosure is mandated by law.
               </p>
             </div>
+          </div>
+           <div className="space-y-6 text-charcoal leading-relaxed mt-6">
+            <p data-testid="values-para-1">
+            Collectively, these values sustain public confidence in the legal profession and affirm the Firm’s unwavering commitment to justice, legality, and ethical advocacy, in rem publicam et clientis utilitatem.
+            </p>
           </div>
         </div>
       </section>
