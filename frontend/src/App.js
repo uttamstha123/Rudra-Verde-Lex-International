@@ -13,41 +13,41 @@ import React, { useEffect, useState } from "react";
 import { Loader } from "./components/Loader";
 
 function App() {
-  const [progress, setProgress] = useState(0);
-  const [loading, setLoading] = useState(true);
+  // const [progress, setProgress] = useState(0);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Simulate progressive loading to 100% with a smooth cadence
-    const start = performance.now();
-    const targetMs = Math.random() * 100 + 500; // ~1.7s feels premium and calm
+  // useEffect(() => {
+  //   // Simulate progressive loading to 100% with a smooth cadence
+  //   const start = performance.now();
+  //   const targetMs = Math.random() * 100 + 500; // ~1.7s feels premium and calm
 
-    const tick = () => {
-      const elapsed = performance.now() - start;
-      const next = Math.min(100, Math.floor((elapsed / targetMs) * 100));
-      setProgress((p) => (next > p ? next : p));
-      if (next < 100) {
-        requestAnimationFrame(tick);
-      } else {
-        // Small grace to avoid abrupt transition
-        setTimeout(() => setLoading(false), 300);
-      }
-    };
-    const raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
-  }, []);
+  //   const tick = () => {
+  //     const elapsed = performance.now() - start;
+  //     const next = Math.min(100, Math.floor((elapsed / targetMs) * 100));
+  //     setProgress((p) => (next > p ? next : p));
+  //     if (next < 100) {
+  //       requestAnimationFrame(tick);
+  //     } else {
+  //       // Small grace to avoid abrupt transition
+  //       setTimeout(() => setLoading(false), 300);
+  //     }
+  //   };
+  //   const raf = requestAnimationFrame(tick);
+  //   return () => cancelAnimationFrame(raf);
+  // }, []);
 
-  const taglines = [
-    "Integrity. Insight. Impact.",
-    "Precision with perspective.",
-    "Law grounded in values.",
-    "Advocacy with clarity.",
-  ];
+  // const taglines = [
+  //   "Integrity. Insight. Impact.",
+  //   "Precision with perspective.",
+  //   "Law grounded in values.",
+  //   "Advocacy with clarity.",
+  // ];
 
   return (
     <div className="App">
-      {loading ? (
+      {/* {loading ? (
         <Loader progress={progress} taglines={taglines} />
-      ) : (
+      ) : ( */}
         <BrowserRouter>
           <Layout>
             <Routes>
@@ -62,7 +62,7 @@ function App() {
             </Routes>
           </Layout>
         </BrowserRouter>
-      )}
+      {/* )} */}
     </div>
   );
 }

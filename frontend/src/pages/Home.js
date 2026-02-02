@@ -67,6 +67,12 @@ export const Home = () => {
           >
             Supreme law of truth beyond borders.
           </p>
+          <p
+            data-testid="hero-subtitle"
+            className="text-md text-accent max-w-2xl mx-auto leading-relaxed"
+          >
+            सत्य विद्या न्याय स्थापना:
+          </p>
         </div>
       </section>
       <section
