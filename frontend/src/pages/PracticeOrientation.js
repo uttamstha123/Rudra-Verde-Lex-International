@@ -1,35 +1,10 @@
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
+import practiceAreas from "../data/practiceAreas.json";
 
 export const PracticeOrientation = () => {
   const [headerRef, headerVisible] = useScrollAnimation();
   const [areasRef, areasVisible] = useScrollAnimation();
   const [approachRef, approachVisible] = useScrollAnimation();
-
-  const practiceAreas = [
-    {
-      title: "Pocso",
-      description:
-        "In POCSO prosecutions, the Firm navigates the delicate equilibrium between victim protection and the inviolable guarantees of fair trial under Articles 14 and 21, ensuring that statutory presumptions under Section 29 do not erode the foundational principle that actus non facit reum nisi mens sit rea. Child-friendly procedures mandated under Sections 24, 26, and 33 are enforced with rigor, while evidentiary scrutiny is applied to aggravated charges under Sections 5 and 6 to prevent mechanical invocation. Procedural irregularities, defective FIRs, and jurisdictional infirmities are challenged invoking audi alteram partem and the abuse of process doctrine, reaffirming that criminal prosecution cannot proceed per incuriam.",
-    },
-    {
-      title: "White Collar Crime",
-      description:
-        "In White Collar Crime and Economic Offences, the Firm undertakes forensic examination of prosecution complaints, attachment orders, and financial records under statutes including PMLA, Companies Act, and allied regulatory frameworks, ensuring that coercive state action withstands constitutional scrutiny. Asset attachment and confiscation proceedings are contested on grounds of proportionality and jurisdictional competence, mindful that nullus commodum capere potest de injuria sua propria. Corporate criminal liability is assessed in light of qui facit per alium facit per se, while safeguarding against unwarranted vicarious attribution absent statutory mandate. Bail and pre-trial liberty are pursued through structured demonstration that incarceration prior to conviction remains an exception, consistent with the presumption of innocence and the overarching mandate of due process.",
-    },
-    {
-      title: "NDPS",
-      description:
-        "In NDPS litigation, the Firm subjects every search, seizure, and arrest to rigorous compliance analysis under Sections 41, 42, 43, 50, and 57, conscious that deviation from statutory safeguards may vitiate proceedings ab initio. The concept of conscious possession is examined through evidentiary nexus and forensic integrity, with strict evaluation of sampling procedures and chain of custody. Bail under Section 37 is argued within the statutory matrix by demonstrating absence of prima facie guilt and improbability of recidivism, reiterating that liberty cannot be eclipsed by allegation alone. Confiscation proceedings under Chapter V-A are contested within constitutional parameters to ensure deprivation of property does not occur in terrorem. Across these domains, the Firm proceeds secundum legem, guided by the maxim fiat justitia ruat caelum, integrating constitutional fidelity, ethical advocacy, and forensic precision while remaining subordinate to the Advocates Act, 1961 and the Bar Council of India Rules.",
-    },
-    {
-      title: "Financial Structuring",
-      description: "At Rudra Verde Lex International, our Financial Structuring practice is predicated upon ratio legis and fiscal prudence, delivering legally fortified frameworks for capital orchestration, asset realignment, and transactional efficiency. We advise within the contours of statutory, tax, and regulatory regimes, ensuring sustainability, fiduciary compliance, and insulation from foreseeable financial and contingent exposures."
-    },
-    {
-      title: "Compliance Structuring",
-      description: "Rudra Verde Lex International's Compliance Structuring is anchored in lex lata and regulatory exactitude, ensuring comprehensive adherence to statutory obligations, governance norms, and ethical canons. Through preventive and corrective compliance architectures, we safeguard institutional continuity, mitigate regulatory risk, and uphold corporate probity against civil, criminal, and administrative scrutiny."
-    }
-  ];
 
   return (
     <div data-testid="practice-page" className="section-neutral">
@@ -91,7 +66,7 @@ export const PracticeOrientation = () => {
           <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
             {practiceAreas.map((area, index) => (
               <div
-                key={index}
+                key={area.id || index}
                 data-testid={`practice-area-${index}`}
                 className="p-10 content-card hover:border-accent transition-all duration-300 card-hover bg-white/80 backdrop-blur-[1px]"
               >

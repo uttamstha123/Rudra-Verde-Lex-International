@@ -1,5 +1,9 @@
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import { useEffect, useRef } from "react";
+import practiceAreas from "../data/practiceAreas.json";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
+
 const heroVideo = require("../assets/lady justice.mp4");
 
 export const Home = () => {
@@ -94,10 +98,11 @@ export const Home = () => {
           <div className="content-card bg-grey-50 p-10">
             <div className="prose-law space-y-6 text-gray-700">
               <p data-testid="intro-para-1" className="text-base">
-                Rudra Verde Lex International is engaged in the facilitation and administration of legal services
-                strictly through Advocates duly enrolled under Section 24 of the
-                Advocates Act, 1961 and holding valid Certificates of Practice
-                as prescribed by the Bar Council of India.
+                Rudra Verde Lex International is engaged in the facilitation and
+                administration of legal services strictly through Advocates duly
+                enrolled under Section 24 of the Advocates Act, 1961 and holding
+                valid Certificates of Practice as prescribed by the Bar Council
+                of India.
               </p>
               <p data-testid="intro-para-2" className="text-base">
                 All legal services rendered by or through the Firm are
@@ -137,44 +142,57 @@ export const Home = () => {
               Our <span className="text-accent">Focus</span>
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div
-              data-testid="focus-area-3"
-              className="content-card-soft bg-white p-10 card-hover"
-            >
-              <h3 className="font-serif text-2xl text-navy-dark mb-5 tracking-wide uppercase">
-                NDPS
-              </h3>
-              {/* <div className="w-12 h-0.5 bg-grey-300 mb-0"></div> */}
-              <p className="text-gray-600 leading-relaxed text-sm">
-               In NDPS litigation, the Firm subjects every search, seizure, and arrest to rigorous compliance analysis under Sections 41, 42, 43, 50, and 57, conscious that deviation from statutory safeguards may vitiate proceedings ab initio. The concept of conscious possession is examined through evidentiary nexus and forensic integrity, with strict evaluation of sampling procedures and chain of custody.
-              </p>
-            </div>
-            <div
-              data-testid="focus-area-1"
-              className="content-card-soft bg-white p-10 card-hover"
-            >
-              <h3 className="font-serif text-2xl text-navy-dark mb-5 tracking-wide uppercase">
-                Pocso
-              </h3>
-              {/* <div className="w-12 h-0.5 bg-grey-300 mb-0"></div> */}
-              <p className="text-gray-600 leading-relaxed text-sm">
-               In POCSO prosecutions, the Firm navigates the delicate equilibrium between victim protection and the inviolable guarantees of fair trial under Articles 14 and 21, ensuring that statutory presumptions under Section 29 do not erode the foundational principle that actus non facit reum nisi mens sit rea.
-              </p>
-            </div>
-            <div
-              data-testid="focus-area-2"
-              className="content-card-soft bg-white p-10 card-hover"
-            >
-              <h3 className="font-serif text-2xl text-navy-dark mb-5 tracking-wide uppercase">
-                White Collar Crime
-              </h3>
-              {/* <div className="w-12 h-0.5 bg-grey-300 mb-0"></div> */}
-              <p className="text-gray-600 leading-relaxed text-sm">
-               In White Collar Crime and Economic Offences, the Firm undertakes forensic examination of prosecution complaints, attachment orders, and financial records under statutes including PMLA, Companies Act, and allied regulatory frameworks, ensuring that coercive state action withstands constitutional scrutiny.
-              </p>
-            </div>
-          </div>
+
+          {/* Responsive Splide carousel */}
+          <Splide
+            aria-label="Practice Areas"
+            options={{
+              type: "loop",
+              interval: 2200,
+              arrows: false,
+              pagination: false,
+              speed: 800,
+              perPage: 3,
+              perMove: 1,
+              gap: "2rem",
+              autoplay: true,
+              breakpoints: {
+                1024: { perPage: 2, gap: "1.5rem" },
+                640: { perPage: 1, gap: "1rem" },
+              },
+            }}
+          >
+            {practiceAreas.map((area, index) => (
+              <SplideSlide key={area.id || index}>
+                <div
+                  data-testid={`focus-area-${index + 1}`}
+                  className="content-card-soft bg-white p-10 card-hover h-full"
+                >
+                  <h3 className="font-serif text-xl text-navy-dark mb-5 tracking-wide uppercase">
+                    {area.title}
+                  </h3>
+                  <p className="text-gray-600 text-justify leading-relaxed text-sm">
+                    {(() => {
+                      const text = area.description || "";
+                      const words = text.trim().split(/\s+/);
+                      return words.length > 45
+                        ? words.slice(0, 45).join(" ") + "..."
+                        : text;
+                    })()}
+                  </p>
+                </div>
+              </SplideSlide>
+            ))}
+          </Splide>
+        </div>
+        {/* View More button outside the section */}
+        <div className="mt-8 text-center">
+          <a
+            href="/practice"
+            className="inline-block px-6 py-3 bg-navy-dark text-white rounded hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-navy-dark"
+          >
+            View More
+          </a>
         </div>
       </section>
 
