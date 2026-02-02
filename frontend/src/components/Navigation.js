@@ -24,7 +24,7 @@ export const Navigation = () => {
     { path: '/about', label: 'About' },
     { path: '/practice', label: 'Practice Orientation' },
     { path: '/values', label: 'Values & Ethics' },
-    { path: '/people', label: 'People' },
+    // { path: '/people', label: 'People' },
     // { path: '/publications', label: 'Publications' },
     { path: '/contact', label: 'Contact' },
   ];

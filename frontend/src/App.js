@@ -55,10 +55,10 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/practice" element={<PracticeOrientation />} />
               <Route path="/values" element={<Values />} />
-              <Route path="/people" element={<People />} />
-              <Route path="/publications" element={<Publications />} />
+              {/* <Route path="/people" element={<People />} /> */}
+              {/* <Route path="/publications" element={<Publications />} /> */}
               <Route path="/contact" element={<Contact />} />
-              <Route path="/disclaimer" element={<Disclaimer />} />
+              {/* <Route path="/disclaimer" element={<Disclaimer />} /> */}
             </Routes>
           </Layout>
         </BrowserRouter>

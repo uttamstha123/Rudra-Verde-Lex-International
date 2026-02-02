@@ -21,6 +21,14 @@ export const PracticeOrientation = () => {
       description:
         "In NDPS litigation, the Firm subjects every search, seizure, and arrest to rigorous compliance analysis under Sections 41, 42, 43, 50, and 57, conscious that deviation from statutory safeguards may vitiate proceedings ab initio. The concept of conscious possession is examined through evidentiary nexus and forensic integrity, with strict evaluation of sampling procedures and chain of custody. Bail under Section 37 is argued within the statutory matrix by demonstrating absence of prima facie guilt and improbability of recidivism, reiterating that liberty cannot be eclipsed by allegation alone. Confiscation proceedings under Chapter V-A are contested within constitutional parameters to ensure deprivation of property does not occur in terrorem. Across these domains, the Firm proceeds secundum legem, guided by the maxim fiat justitia ruat caelum, integrating constitutional fidelity, ethical advocacy, and forensic precision while remaining subordinate to the Advocates Act, 1961 and the Bar Council of India Rules.",
     },
+    {
+      title: "Financial Structuring",
+      description: "At Rudra Verde Lex International, our Financial Structuring practice is predicated upon ratio legis and fiscal prudence, delivering legally fortified frameworks for capital orchestration, asset realignment, and transactional efficiency. We advise within the contours of statutory, tax, and regulatory regimes, ensuring sustainability, fiduciary compliance, and insulation from foreseeable financial and contingent exposures."
+    },
+    {
+      title: "Compliance Structuring",
+      description: "Rudra Verde Lex International's Compliance Structuring is anchored in lex lata and regulatory exactitude, ensuring comprehensive adherence to statutory obligations, governance norms, and ethical canons. Through preventive and corrective compliance architectures, we safeguard institutional continuity, mitigate regulatory risk, and uphold corporate probity against civil, criminal, and administrative scrutiny."
+    }
   ];
 
   return (
@@ -87,10 +95,10 @@ export const PracticeOrientation = () => {
                 data-testid={`practice-area-${index}`}
                 className="p-10 content-card hover:border-accent transition-all duration-300 card-hover bg-white/80 backdrop-blur-[1px]"
               >
-                <h3 className="font-serif text-2xl text-navy-dark mb-5 tracking-wide">
+                <h3 className="font-serif text-2xl text-navy-dark mb-2 tracking-wide uppercase">
                   {area.title}
                 </h3>
-                <div className="w-12 h-0.5 bg-divider mb-5"></div>
+                <div className="w-12 h-0.5 bg-divider mb-3"></div>
                 <p className="text-charcoal leading-relaxed text-sm">
                   {area.description}
                 </p>

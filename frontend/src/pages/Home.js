@@ -94,8 +94,7 @@ export const Home = () => {
           <div className="content-card bg-grey-50 p-10">
             <div className="prose-law space-y-6 text-gray-700">
               <p data-testid="intro-para-1" className="text-base">
-                Rudra Verde Lex International is a private limited entity
-                engaged in the facilitation and administration of legal services
+                Rudra Verde Lex International is engaged in the facilitation and administration of legal services
                 strictly through Advocates duly enrolled under Section 24 of the
                 Advocates Act, 1961 and holding valid Certificates of Practice
                 as prescribed by the Bar Council of India.
