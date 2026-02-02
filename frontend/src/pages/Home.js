@@ -171,7 +171,7 @@ export const Home = () => {
                   <h3 className="font-serif text-xl text-navy-dark mb-5 tracking-wide uppercase">
                     {area.title}
                   </h3>
-                  <p className="text-gray-600 text-justify leading-relaxed text-sm">
+                  <p className="text-gray-600 leading-relaxed text-sm">
                     {(() => {
                       const text = area.description || "";
                       const words = text.trim().split(/\s+/);
