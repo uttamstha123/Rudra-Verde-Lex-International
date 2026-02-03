@@ -1,5 +1,6 @@
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import practiceAreas from "../data/practiceAreas.json";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
@@ -187,12 +188,12 @@ export const Home = () => {
         </div>
         {/* View More button outside the section */}
         <div className="mt-8 text-center">
-          <a
-            href="/practice"
+          <Link
+            to="/practice"
             className="inline-block px-6 py-3 bg-navy-dark text-white rounded hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-navy-dark"
           >
             View More
-          </a>
+          </Link>
         </div>
       </section>
 
