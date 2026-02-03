@@ -148,7 +148,7 @@ export const Home = () => {
           <Splide
             aria-label="Practice Areas"
             options={{
-              type: "loop",
+              // type: "loop",
               interval: 2200,
               arrows: false,
               pagination: false,
@@ -163,27 +163,93 @@ export const Home = () => {
               },
             }}
           >
-            {practiceAreas.map((area, index) => (
-              <SplideSlide key={area.id || index}>
-                <div
-                  data-testid={`focus-area-${index + 1}`}
-                  className="content-card-soft bg-white p-10 card-hover h-full"
-                >
-                  <h3 className="font-serif text-xl text-navy-dark mb-5 tracking-wide uppercase">
-                    {area.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed text-sm">
-                    {(() => {
-                      const text = area.description || "";
-                      const words = text.trim().split(/\s+/);
-                      return words.length > 45
-                        ? words.slice(0, 45).join(" ") + "..."
-                        : text;
-                    })()}
-                  </p>
-                </div>
-              </SplideSlide>
-            ))}
+            {/* {practiceAreas.map((area, index) => ( */}
+            <SplideSlide key="slide3">
+              <div
+                data-testid="focus-area-3"
+                className="content-card-soft bg-white p-6 card-hover h-full"
+              >
+                <h3 className="font-serif text-xl text-navy-dark mb-5 tracking-wide uppercase">
+                  NDPS
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  In NDPS litigation, the Firm subjects every search, seizure,
+                  and arrest to rigorous compliance analysis under Sections 41,
+                  42, 43, 50, and 57, conscious that deviation from statutory
+                  safeguards may vitiate proceedings ab initio.
+                </p>
+              </div>
+            </SplideSlide>
+            <SplideSlide key="slide1">
+              <div
+                data-testid="focus-area-1"
+                className="content-card-soft bg-white p-6 card-hover h-full"
+              >
+                <h3 className="font-serif text-xl text-navy-dark mb-5 tracking-wide uppercase">
+                  POSCO
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  In POCSO prosecutions, the Firm navigates the delicate
+                  equilibrium between victim protection and the inviolable
+                  guarantees of fair trial under Articles 14 and 21, ensuring
+                  that statutory presumptions under Section 29 do not erode the
+                  foundational principle that actus non facit reum nisi mens sit
+                  rea.
+                </p>
+              </div>
+            </SplideSlide>
+            <SplideSlide key="slide2">
+              <div
+                data-testid="focus-area-2"
+                className="content-card-soft bg-white p-6 card-hover h-full"
+              >
+                <h3 className="font-serif text-xl text-navy-dark mb-5 tracking-wide uppercase">
+                  White Collar Crime
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  In White Collar Crime and Economic Offences, the Firm
+                  undertakes forensic examination of prosecution complaints,
+                  attachment orders, and financial records under statutes
+                  including PMLA, Companies Act, and allied regulatory
+                  frameworks, ensuring that coercive state action withstands
+                  constitutional scrutiny.
+                </p>
+              </div>
+            </SplideSlide>
+            <SplideSlide key="slide4">
+              <div
+                data-testid="focus-area-4"
+                className="content-card-soft bg-white p-6 card-hover h-full"
+              >
+                <h3 className="font-serif text-xl text-navy-dark mb-5 tracking-wide uppercase">
+                  Financial Structuring
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  At Rudra Verde Lex International, our Financial Structuring
+                  practice is predicated upon ratio legis and fiscal prudence,
+                  delivering legally fortified frameworks for capital
+                  orchestration, asset realignment, and transactional
+                  efficiency.
+                </p>
+              </div>
+            </SplideSlide>
+            <SplideSlide key="slide5">
+              <div
+                data-testid="focus-area-5"
+                className="content-card-soft bg-white p-6 card-hover h-full"
+              >
+                <h3 className="font-serif text-xl text-navy-dark mb-5 tracking-wide uppercase">
+                  Compliance Structuring
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
+                  Rudra Verde Lex International's Compliance Structuring is
+                  anchored in lex lata and regulatory exactitude, ensuring
+                  comprehensive adherence to statutory obligations, governance
+                  norms, and ethical canons.
+                </p>
+              </div>
+            </SplideSlide>
+            {/* ))} */}
           </Splide>
         </div>
         {/* View More button outside the section */}
