@@ -47,7 +47,7 @@ export const Navigation = () => {
             <img
               src={logo}
               alt="Rudra Verde Lex International logo"
-              className="h-20 w-auto"
+              className="h-12 w-auto"
             />
           </Link>
 
