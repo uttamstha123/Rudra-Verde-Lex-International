@@ -1,18 +1,19 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="description" content="" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet" />
-        <!--
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet" />
+    <!--
         manifest.json provides metadata used when your web app is installed on a
         user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
         -->
-        <!--
+    <!--
         Notice the use of %PUBLIC_URL% in the tags above.
         It will be replaced with the URL of the `public` folder during the build.
         Only files inside the `public` folder can be referenced from the HTML.
@@ -21,36 +22,54 @@
         work correctly both with client-side routing and a non-root public URL.
         Learn how to configure a non-root public URL by running `npm run build`.
         -->
-        <link rel="icon" href="./favicon/favicon-16x16.png"/>
-        <link rel="shortcut icon" href="./favicon/favicon-16x16.png" />
-        <link rel="apple-touch-icon" href="./favicon/apple-touch-icon.png" />
-        <link rel="manifest" href="./favicon/site.webmanifest" />
-        <title>Rudra Verde Lex International</title>
-        <!--
+    <link rel="icon" href="./favicon/favicon-16x16.png" />
+    <link rel="shortcut icon" href="./favicon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="./favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+    <title>Rudra Verde Lex International</title>
+    <!--
         These two scripts have been added for the Visual Edits, please do not edit or remove them
         -->
-        <script>
-            // Only load visual edit scripts when inside an iframe
-            if (window.self !== window.top) {
-                // Load debug monitor script
-                var debugMonitorScript = document.createElement('script');
-                
+    <script>
+        // Only load visual edit scripts when inside an iframe
+        if (window.self !== window.top) {
+            // Load debug monitor script
+            var debugMonitorScript = document.createElement('script');
 
-                // Configure Tailwind
-                window.tailwind = window.tailwind || {};
-                tailwind.config = {
-                    corePlugins: { preflight: false },
-                };
 
-                // Load Tailwind CDN
-                var tailwindScript = document.createElement('script');
-                tailwindScript.src = 'https://cdn.tailwindcss.com';
-                document.head.appendChild(tailwindScript);
-            }
-        </script>
-    </head>
-    <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div id="root"></div>
-    </body>
+            // Configure Tailwind
+            window.tailwind = window.tailwind || {};
+            tailwind.config = {
+                corePlugins: { preflight: false },
+            };
+
+            // Load Tailwind CDN
+            var tailwindScript = document.createElement('script');
+            tailwindScript.src = 'https://cdn.tailwindcss.com';
+            document.head.appendChild(tailwindScript);
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Rudra Verde Lex International",
+        "url": "https://rudraverdelex.com",
+        "logo": {
+                "@type": "ImageObject",
+                "url": "https://rudraverdelex.com/favicon/favicon-32x32.png",
+                "width": 300,
+                "height": 300
+            }   
+        }
+    </script>
+
+</head>
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+</body>
+
 </html>
