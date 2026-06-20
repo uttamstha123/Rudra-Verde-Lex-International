@@ -68,3 +68,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Maintenance mode
+
+Set `REACT_APP_SITE_MODE=maintenance` in `frontend/.env` to show the maintenance page.
+Set it back to `live` to restore the normal site.
+
+Restart the frontend dev server after changing the value so the new mode is picked up.
