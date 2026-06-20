@@ -50,7 +50,7 @@ export const Maintenance = () => {
                   </p>
                 </div>
 
-                <div className="content-card-soft bg-grey-50 p-5">
+                {/* <div className="content-card-soft bg-grey-50 p-5">
                   <p className="text-xs uppercase tracking-[0.3em] text-accent mb-3">
                     Update path
                   </p>
@@ -60,7 +60,7 @@ export const Maintenance = () => {
                     <span className="text-accent"> maintenance</span> and
                     <span className="text-accent"> live</span>.
                   </p>
-                </div>
+                </div> */}
 
                 <div className="content-card-soft bg-grey-50 p-5">
                   <p className="text-xs uppercase tracking-[0.3em] text-accent mb-3">
@@ -86,10 +86,10 @@ export const Maintenance = () => {
 
               <div className="section-divider" />
 
-              <p className="text-sm text-charcoal max-w-2xl leading-relaxed">
+              {/* <p className="text-sm text-charcoal max-w-2xl leading-relaxed">
                 If you are deploying locally, set <span className="text-accent">REACT_APP_SITE_MODE=live</span>
                 to restore the full site, then restart the frontend dev server.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
